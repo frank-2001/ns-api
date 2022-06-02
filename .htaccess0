@@ -1,0 +1,4 @@
+AuthName "Connexion Api"
+AuthType Basic
+AuthUserFile "C:\xampp\htdocs\Projets\Bnet2\Api\.htpasswd"
+Require valid-user

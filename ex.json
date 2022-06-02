@@ -1,0 +1,8 @@
+{
+	"state":true,
+	"message":"Tout est Okey",
+	"result":{
+		"nom":"frank",
+		"etat":["Intelligent","Cool","Grand"]
+	}
+}
