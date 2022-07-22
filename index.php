@@ -111,7 +111,7 @@ elseif (isset($_GET['updateProfilImage'])){
 	$retour['data']=$data;
 }
 else{
-	$retour["state"]='vide';
+	$retour["state"]=true;
 	$retour["message"]="Vieuiller preciser votre demande en GET";
 }
 // require 'deplace.php';

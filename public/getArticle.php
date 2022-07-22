@@ -37,7 +37,7 @@ try {
 		$resultats[$i]['images'][0]=$resultats[$i]['images'][$alea];
 		$resultats[$i]['images'][$alea]=$imgA;
 	}
-	$retour["resultat"]=$resultats;
+	$retour['resultat']=$resultats;
 	}
 }
 catch(Exception $e){
