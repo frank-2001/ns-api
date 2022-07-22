@@ -19,7 +19,7 @@ try {
 	$bdd = 	new PDO('mysql:host='.$host.';dbname='.$dbname, $user, $pass); 
 	//Save backup db every 24 hours
 	$lastBack=file_get_contents("lastBack.txt");
-	if (intval(time())-intval($lastBack)>1 && $_SERVER['SERVER_NAME']!="localhost") {
+	if (intval(time())-intval($lastBack)>86400 && $_SERVER['SERVER_NAME']!="localhost") {
 		require 'exportDb.php';
 		backupDb($host,$user,$pass,$dbname,$tables = '*');
 		$myfile = fopen("lastBack.txt", "w") or die("Unable to open file!");
