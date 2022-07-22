@@ -1,12 +1,7 @@
 <?php
 header("Access-Control-Allow-Origin: *");
 header('Content-Type: application/json');
-if ($_SERVER['SERVER_NAME']=="localhost") {
-	require 'bdd.php';
-}else{
-	require 'https://nstore-db.000webhostapp.com/bdd.php';
-}
-
+require 'bdd.php';
 require 'functions.php';
 $retour=array();
 if (isset($_GET['onLine'])){

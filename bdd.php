@@ -1,10 +1,13 @@
 <?php 
 #ce sccript connecte le site la basse des donnees
 try { 
-#Base des donnees en ligne
-	// $bdd = new PDO('mysql:host=databases.000webhost.com ;dbname=id19308017_nstoredb', 'id19308017_franky', 'B]YLDz601WF73tS4');
-#Base des donnes local
-	$bdd = new PDO('mysql:host=localhost;dbname=nsdb', 'root', ''); 
+	if ($_SERVER['SERVER_NAME']=="localhost") {
+		#Base des donnes local
+		$bdd = 	new PDO('mysql:host=localhost;dbname=nsdb', 'root', ''); 
+	}else{
+		#Base des donnees en ligne
+		$bdd = new PDO('mysql:host=sql.freedb.tech;dbname=freedb_nstore-db', 'freedb_franky', 'b2pXgQgE*cQgG6d');
+	}
 }
 
 catch   (PDOException $pe)
